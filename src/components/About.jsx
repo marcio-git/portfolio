@@ -5,7 +5,7 @@ export default function About() {
     <section id='about' className={styles.two}>
       <div className={styles.main_text}>
         <h2>About Me</h2>
-        <p>I'm a a Frontend and Backend Jr. developer.
+        <p>I'm a Frontend and Backend Jr. developer.
           <br/>
           I’m currently learning React JS and TypeScript.
           <br/>
