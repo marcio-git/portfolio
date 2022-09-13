@@ -1,0 +1,51 @@
+.three {
+  padding: 4em 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.main_text h2 {
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 0 10px 8px #353535;
+}
+.table {
+  padding: 2em;
+  display: grid;
+  /* margin: auto; */
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 4em;
+}
+.box {
+  min-width: 150px;
+  height: 150px;
+  color: black;
+  background-color: #FEFBF6;
+  border-radius: 5px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.box p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  z-index: 1;
+}
+.box p:nth-child(2) {
+  font-size: 1em;
+  font-weight: 400;
+}
+.box img {
+  height: 220px;
+  margin-top: -6em;
+  opacity: 15%;
+}
+
+/* ---------------- @Query ------------------ */
+/*small screens*/
+@media only screen and (max-width: 600px) {
+  .table {
+    gap: 2em;
+  }
+}

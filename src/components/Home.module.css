@@ -1,0 +1,75 @@
+.one {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+  font-family: 'Rubik', sans-serif;
+  background: url('https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/aa8625109287767.5fd08439c7676.jpg');
+  background-position: 120% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  height: 600px;
+}
+.main_text {
+  margin-left: 10%; 
+}
+.main_text h1 {
+  font-weight: 700;
+  font-size: 3.5em;
+}
+.main_text h2 {
+  font-size: 3em;
+}
+.main_text h3 {
+  font-size: 1.5em;
+}
+.main_text h1, h2 {
+  margin-bottom: .5em;
+}
+.main_text h1, 
+.main_text h2, 
+.main_text h3 {
+  text-shadow: 0 10px 8px #353535;
+}
+.one img {
+  display: block;
+  width: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* --------------------------------- Button --------------------------------- */
+
+.button_33 {
+  margin: 2em 0;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, .15) 0 1px 2px,
+    rgba(44, 187, 99, .15) 0 2px 4px,
+    rgba(44, 187, 99, .15) 0 4px 8px,
+    rgba(44, 187, 99, .15) 0 8px 16px,
+    rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1em;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,
+    rgba(44,187,99,.25) 0 1px 2px,
+    rgba(44,187,99,.25) 0 2px 4px,
+    rgba(44,187,99,.25) 0 4px 8px,
+    rgba(44,187,99,.25) 0 8px 16px,
+    rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05);
+}
