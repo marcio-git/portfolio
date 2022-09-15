@@ -82,3 +82,24 @@
     rgba(44, 187, 99, .25) 0 16px 32px;
   transform: scale(1.05);
 }
+.hidden {
+  opacity: 0;
+  transition: all .5s;
+  filter: blur(1px);
+  transform: translateY(30%);
+}
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0%);
+}
+
+/* ---------------- @Query ------------------ */
+@media only screen and (max-width: 641px) {
+  .hidden {
+    transform: translateX(-100%);
+  }
+  .show {
+    transform: translateX(0%);
+  }
+}

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Obs } from '../App';
 import styles from './Techno.module.css';
 import html_icon from '../assets/html_icon.png'
 import css_icon from '../assets/css_icon.png'
@@ -20,18 +21,7 @@ const BoxItem = ({item, img, experience}) => {
   )
 }
 export default function Technologies() {
-
-  useEffect(()=> {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add(styles.show);
-        }
-      })
-    }) 
-    const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
-    hiddenElements.forEach(el => observer.observe(el))
-  }, [])
+  useEffect(() => Obs(styles.show, styles.hidden), [])
 
   return (
     <section id='techno' className={styles.three}>

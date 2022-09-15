@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { Obs } from '../App';
 import styles from './Portfolio.module.css';
 import Img1 from '../assets/1.png';
 import Img2 from '../assets/2.png';
@@ -5,7 +7,7 @@ import Img3 from '../assets/3.png';
 
 const Boxes = ({ img, title, description, link, list }) => {
   return (
-    <div className={styles.box}>
+    <div className={`${styles.box} ${styles.hidden}`}>
       <img src={img} alt="" className={styles.box_img}></img>
       <h3>{title}</h3>
       <p>{description}</p>
@@ -19,6 +21,8 @@ const Boxes = ({ img, title, description, link, list }) => {
   )
 }
 export default function About() {
+  useEffect(() => Obs(styles.show, styles.hidden), [])
+
   return (
     <section id='portfolio' className={styles.four}>
       <div className={styles.main_text}>

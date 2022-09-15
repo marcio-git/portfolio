@@ -22,3 +22,17 @@ function App() {
 }
 
 export default App
+
+export function Obs (show, hide, mil = 50) {
+  const observer = new IntersectionObserver((entries) => {
+    for(let i = 0; i < entries.length; i++) {
+      setTimeout(function(){
+        if(entries[i].isIntersecting) {
+            entries[i].target.classList.add(show);
+        }
+      },i*mil)
+    }
+  }) 
+  const hiddenElements = document.querySelectorAll(`.${hide}`);
+  hiddenElements.forEach(el => observer.observe(el))
+}
