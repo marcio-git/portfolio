@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from './Techno.module.css';
 import html_icon from '../assets/html_icon.png'
 import css_icon from '../assets/css_icon.png'
@@ -11,7 +12,7 @@ import mysql_icon from '../assets/mysql_icon.png'
 
 const BoxItem = ({item, img, experience}) => {
   return (
-    <div className={styles.box}>
+    <div className={`${styles.box} ${styles.hidden}`}>
       <p>{item}</p>
       <p>Experience: {experience}</p>
       <img src={img} alt="imagen" />
@@ -19,6 +20,19 @@ const BoxItem = ({item, img, experience}) => {
   )
 }
 export default function Technologies() {
+
+  useEffect(()=> {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add(styles.show);
+        }
+      })
+    }) 
+    const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
+    hiddenElements.forEach(el => observer.observe(el))
+  }, [])
+
   return (
     <section id='techno' className={styles.three}>
       <div className={styles.main_text}>
