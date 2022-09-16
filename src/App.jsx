@@ -23,13 +23,12 @@ function App() {
 
 export default App
 
-export function Obs (show, hide, mil = 50) {
+export function Obs (show, hide, mil = 50, bool) {
   const observer = new IntersectionObserver((entries) => {
     for(let i = 0; i < entries.length; i++) {
       setTimeout(function(){
-        if(entries[i].isIntersecting) {
-            entries[i].target.classList.add(show);
-        }
+        if(entries[i].isIntersecting) entries[i].target.classList.add(show);
+        else if (bool) entries[i].target.classList.remove(show);
       },i*mil)
     }
   }) 
