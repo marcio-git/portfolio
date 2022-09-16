@@ -20,7 +20,7 @@ const Boxes = ({ img, title, description, link, list }) => {
     </div>
   )
 }
-export default function About() {
+export default function Portfolio() {
   useEffect(() => Obs(styles.show, styles.hidden), [])
 
   return (
