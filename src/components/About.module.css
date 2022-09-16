@@ -3,31 +3,45 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 4em 0;
-  margin: -4em 0;
   font-family: 'Rubik', sans-serif;
+  min-height: 650px;
   overflow: hidden;
 }
 .main_text {
-  margin: 0 1.4em;
   width: max(600px, 50%);
   order: 2;
+  z-index: 1;
 }
 .main_text h2 {
-  font-size: 2.5em;
   text-shadow: 0 10px 8px #353535;
+  font-size: 2.5em;
 }
 .main_text p {
   line-height: 1.4em;
   font-size: 1.5em;
+  text-shadow: 0 2px 5px #000;
 }
+
 .two img {
   display: block;
   order: 1;
-  width: max(400px, 45%);
-  padding: 2em 0;
+  transform: scale(1.8) translateX(50px);
+  width: max(200px, 30%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25% 75% / 50%;
+}
+
+/* ---------------- @Query ------------------ */
+@media only screen and (max-width: 857px) {
+  .main_text {
+    width: 90%;
+    transform: translate(0px, -100px);
+  }
+
+  .two img {
+    width: max(100px, 80vw);
+    transform: scale(1) translate(0px, 0px);
+  }
 }
