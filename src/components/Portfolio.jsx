@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { Obs } from '../App';
 import styles from './Portfolio.module.css';
-import Img1 from '../assets/1.png';
-import Img2 from '../assets/2.png';
-import Img3 from '../assets/3.png';
+import Img1 from '../assets/commerce.jpg';
+import Img2 from '../assets/grupo.jpg';
+import Img3 from '../assets/hotel.png';
+import Img4 from '../assets/moleros.jpg';
 
-const Boxes = ({ img, title, description, link, list }) => {
+const Boxes = ({ img, title, description, list, link, link_name }) => {
   return (
     <div className={`${styles.box} ${styles.hidden}`}>
       <img src={img} alt="" className={styles.box_img}></img>
@@ -16,7 +17,7 @@ const Boxes = ({ img, title, description, link, list }) => {
           <span key={i} className={styles.technologies_span}>{i}</span>
         ))}
       </div>
-      <a href={link} target="_blank" className={styles.button_33}>Repo</a>
+      <a href={link} target="_blank" className={styles.button_33}>{link_name || 'Repo'}</a>
     </div>
   )
 }
@@ -29,6 +30,13 @@ export default function Portfolio() {
         <h2>Portfolio</h2>
       </div>
       <div className={styles.table}>
+        <Boxes
+          img={Img4}
+          title={'Moleros · Servicios Integrales'}
+          description={`This is a real landing page for a small cleaning company I recently built. I used Node, Express framework and NodeMailer module to send messages to the company email address just right from the page contact component.`}
+          list={['React', 'Node', 'Express', 'NodeMailer', 'CSS Modules']}
+          link={'https://moleros.com.ar'}
+          link_name={'Live'} />
         <Boxes
           img={Img1}
           title={'Coder-Commerce'}
