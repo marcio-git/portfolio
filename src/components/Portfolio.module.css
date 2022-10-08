@@ -28,7 +28,12 @@
 .box h3, .box p {
   margin: 1em 0;
 }
-.box_img {
+.box_img svg {
+  position: absolute;
+  scale: 4;
+  left: 1em;
+}
+.box_img .img {
   width: 100%;
   border-radius: 5px;
 }

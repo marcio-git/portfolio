@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { Icon } from '@iconify/react';
 import styles from "./Nav.module.css";
 
 const MenuItem = ({open, ...rootDOMAttributes}) => {
   return (
     <div className={styles.menu}>
       MARCIO
-      <div className={open ? styles.icon_close : styles.icon_open} 
-      {...rootDOMAttributes}></div>
+      <Icon {...rootDOMAttributes} icon={open ?  "icon-park-outline:close" : 'simple-line-icons:menu'} />
     </div>
   )
 }

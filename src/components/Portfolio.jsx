@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Icon } from '@iconify/react';
 import { Obs } from '../App';
 import styles from './Portfolio.module.css';
 import Img1 from '../assets/commerce.jpg';
@@ -6,10 +7,13 @@ import Img2 from '../assets/grupo.jpg';
 import Img3 from '../assets/hotel.png';
 import Img4 from '../assets/moleros.jpg';
 
-const Boxes = ({ img, title, description, list, link, link_name }) => {
+const Boxes = ({ icon, img, title, description, list, link, link_name }) => {
   return (
     <div className={`${styles.box} ${styles.hidden}`}>
-      <img src={img} alt="" className={styles.box_img}></img>
+      <div className={styles.box_img}>
+        <Icon icon={icon} color="yellow" />
+        <img src={img} alt="" className={styles.img}></img>
+      </div>
       <h3>{title}</h3>
       <p>{description}</p>
       <div className={styles.technologies_list}>
@@ -31,6 +35,7 @@ export default function Portfolio() {
       </div>
       <div className={styles.table}>
         <Boxes
+          icon={"clarity:new-solid"}
           img={Img4}
           title={'Moleros · Servicios Integrales'}
           description={`This is a real landing page for a small cleaning company I recently built. I used Node, Express framework and NodeMailer module to send messages to the company email address just right from the page contact component.`}
