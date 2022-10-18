@@ -38,7 +38,7 @@ export default function Portfolio() {
           icon={"clarity:new-solid"}
           img={Img4}
           title={'Moleros · Servicios Integrales'}
-          description={`This is a real landing page for a small cleaning company I recently built. I used Node, Express framework and NodeMailer module to send messages to the company email address just right from the page contact component.`}
+          description={'This is a real landing page for a small cleaning company I recently built. I used Node, Express framework and NodeMailer module to send messages to the company email address just right from the page contact component.'}
           list={['React', 'Node', 'Express', 'NodeMailer', 'CSS Modules']}
           link={'https://moleros.com.ar'}
           link_name={'Live'} />
@@ -51,7 +51,7 @@ export default function Portfolio() {
         <Boxes
           img={Img2}
           title={'Grupo-20'}
-          description={'An Fintech App. This is my first group project with others developers. I was in charge of the front-end development.'}
+          description={'An Fintech App. This is my first group project. It gave me the experience of working with others developers. I was in charge of the front-end development.'}
           list={['React', 'React-Dom', 'Expres', 'Styled Component', 'Axios', 'sweetalert2', 'Sequelize', 'React Chartjs 2', 'GitHub']}
           link={'https://github.com/No-Country/C2-G20'} />
         <Boxes
