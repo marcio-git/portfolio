@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Laptop3D from './Laptop3D';
 import { Icon } from '@iconify/react';
 import { Obs } from '../App';
 import styles from './Home.module.css';
@@ -16,6 +17,7 @@ export default function Home() {
         <Icon icon="heroicons-outline:document-download" inline={true} />
         Download CV</a>
       </div>
+      <Laptop3D />
     </section>
   )
 }

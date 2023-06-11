@@ -1,16 +1,18 @@
 .one {
   display: flex;
+  /* justify-content: space-around; */
   align-items: center;
   margin: 2em 0;
   font-family: 'Rubik', sans-serif;
-  background: url('https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/aa8625109287767.5fd08439c7676.jpg');
-  background-position: 120% 50%;
+  /* background: url('https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/aa8625109287767.5fd08439c7676.jpg'); */
+  /* background-position: 120% 50%;
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 70%; */
   height: 600px;
 }
 .main_text {
   margin-left: 10%; 
+  z-index: 2;
 }
 .main_text h1 {
   font-weight: 700;
