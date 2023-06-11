@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 .container {
-  /* background-color: #000; */
-  background: rgb(8,6,60);
-  background: linear-gradient(180deg, rgba(8,6,60,1) 0%, rgba(37,37,159,1) 28%, rgba(22,77,212,1) 58%, rgba(14,133,157,1) 100%); 
   color: #fff;
 }
 
