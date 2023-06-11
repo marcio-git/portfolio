@@ -7,6 +7,7 @@ import Img2 from '../assets/grupo.jpg';
 import Img3 from '../assets/hotel.png';
 import Img4 from '../assets/moleros.jpg';
 import Img5 from '../assets/presupuesto.png';
+import Img6 from '../assets/country-res.jpg';
 
 const Boxes = ({ icon, img, title, description, list, link_repo, link_live }) => {
   return (
@@ -37,7 +38,12 @@ export default function Portfolio() {
       </div>
       <div className={styles.table}>
         <Boxes
-          icon={"clarity:new-solid"}
+          img={Img6}
+          title={'Country Restaurant'}
+          description={'Another cohorte I participated as a Frontend developer and my first project using Redux ⚛️. The proposed software consists of an e-commerce platform that provides a useful tool for current and future customers.'}
+          list={['React', 'Styled Component', 'React-Router-Dom', 'Redux', 'MySQL', 'Maven', 'Docker']}
+          link_repo={'https://github.com/No-Country/c9-20-javareact-fulltime/tree/frontend'} />
+        <Boxes
           img={Img4}
           title={'Moleros · Servicios Integrales'}
           description={'This is a real landing page for a small cleaning company I recently built. I used Node, Express framework and NodeMailer module to send messages to the company email address just right from the page contact component.'}
@@ -47,7 +53,7 @@ export default function Portfolio() {
           img={Img1}
           title={'Coder-Commerce'}
           description={'An E-Commerce App where you will be able to buy clothes and technology. This project is part of CoderHouse.com Bootcamp. I used React JS as front-end and FireStore as DB and deployed on Vercel.'}
-          list={['React', 'React-Dom', 'ContextAPI', 'FireStore']}
+          list={['React', 'React-Router-Dom', 'ContextAPI', 'FireStore']}
           link_repo={'https://github.com/marcio-git/Coder-Commerce'}
           link_live={'https://commerce-house.vercel.app/'} />
         <Boxes
