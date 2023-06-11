@@ -9,7 +9,7 @@
   text-shadow: 0 10px 8px #353535;
 }
 .table {
-  padding: 2em;
+  padding: 4em 2em;
   display: grid;
   /* margin: auto; */
   flex-wrap: wrap;
@@ -19,28 +19,18 @@
 .box {
   min-width: 150px;
   height: 150px;
-  color: black;
-  background-color: #FEFBF6;
-  border-radius: 5px;
-  border: 1px solid black;
-  overflow: hidden;
+  display: grid;
+  justify-items: center;
 }
+
 .box p {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-left: 10px;
-  z-index: 1;
-}
-.box p:nth-child(2) {
   font-size: 1em;
   font-weight: 400;
+  margin-left: 2em;
+  margin-top: 20px;
+  transform: skewX(20deg);
 }
-.box img {
-  height: 220px;
-  margin-top: -6em;
-  opacity: 15%;
-}
+
 .hidden {
   opacity: 0;
   transition: all .5s;
@@ -52,7 +42,62 @@
   filter: blur(0px);
   transform: translateX(0%);
 }
-
+.container, .clicked {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vmin;
+  height: 20vmin;
+  background-color: #f0f0f3;
+  box-shadow: -0.6666666667vmin 0.6666666667vmin 2.6666666667vmin #2c393a;
+  border-radius: 2vmin;
+  transform: skewX(20deg);
+  transform-style: preserve-3d;
+  overflow: visible;
+  /* margin-bottom: 20vh; */
+  cursor: pointer;
+}
+.container:hover span, .clicked span {
+  z-index: 1000;
+  transition: all 0.4s ease-out;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+  background-color: #46DCE6;
+  box-shadow: -2vmin 2vmin rgba(70, 220, 230, 0.1);
+}
+.container:hover span:nth-child(5), .clicked span:nth-child(5) {
+  transform: translate(10vmin, -10vmin);
+  opacity: 0.80;
+}
+.container:hover span:nth-child(4), .clicked span:nth-child(4) {
+  transform: translate(8vmin, -8vmin);
+  opacity: 0.6;
+}
+.container:hover span:nth-child(3), .clicked span:nth-child(3) {
+  transform: translate(6vmin, -6vmin);
+  opacity: 0.45;
+}
+.container:hover span:nth-child(2), .clicked span:nth-child(2) {
+  transform: translate(4vmin, -4vmin);
+  opacity: 0.3;
+}
+.container:hover span:nth-child(1), .clicked span:nth-child(1) {
+  transform: translate(2vmin, -2vmin);
+  opacity: 0.15;
+}
+.container span, .clicked span {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 10vmin;
+  display: flex;
+  border-radius: 2vmin;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-out, font-size 0s;
+  cursor: pointer;
+}
 /* ---------------- @Query ------------------ */
 @media only screen and (max-width: 570px) {
   .table {
